@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
+using UnityEngine.UI; //Libreria para manejar objetos del canva
+using TMPro; //Libreria para Texto (Text Mesh Pro)
 
 public class Timer : MonoBehaviour
 {
 
-    public static float timer = 5;
-    public TextMeshProUGUI timerText;
+    public static float timer = 5; //Variable global timer
+    public TextMeshProUGUI timerText; // Variable de texto
     // Start is called before the first frame update
     void Start()
     {

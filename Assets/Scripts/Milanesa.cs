@@ -25,7 +25,7 @@ public class Milanesa : MonoBehaviour
         }
         if(cooking == 2)
         {
-            milanesa.color = Color.yellow;
+            milanesa.color = Color.green;
         }
         if(cooking == 1)
         {
