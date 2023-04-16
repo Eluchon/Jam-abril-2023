@@ -10,5 +10,6 @@ public class Cook : MonoBehaviour
     public void Cooking()
     {
          Timer.timer += 1;
+         Milanesa.cooking -= 1;
     }
 }
