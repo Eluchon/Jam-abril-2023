@@ -32,9 +32,14 @@ public class Milanesa : MonoBehaviour
         }
         if(cooking == 0)
         {
+            Timer.timer = 5;
             cooking = 3;
             MilanesaCount.points += 1;
         }
         
+    }
+    public void Cooking()
+    {
+        cooking -= 1;
     }
 }

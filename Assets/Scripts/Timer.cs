@@ -7,7 +7,7 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
 
-    public static float timer = 20;
+    public static float timer = 5;
     public TextMeshProUGUI timerText;
     // Start is called before the first frame update
     void Start()
@@ -18,13 +18,15 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(timer > 0)
+        {
         timer -= (Time.deltaTime * 5);
-
         timerText.text = "" + timer.ToString("f1");
+        }
 
         if(timer <= 0)
         {
-          Debug.Log("Se acabo el tiempo");
+          Debug.Log("Se quemo la milanesa");
           timer = 0;
         }
     }
