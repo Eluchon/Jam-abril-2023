@@ -8,6 +8,8 @@ public class Milanesa : MonoBehaviour
 
     public static int cooking = 3;
     public Image milanesa;
+
+
     // Start is called before the first frame update
     void Start()
     {
