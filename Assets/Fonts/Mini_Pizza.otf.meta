@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 4ef69b0278882f94d9de9bf40e9eb692
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Mini Pizza
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0a7b74ff2cab1394ba536b09e46cd6b5, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

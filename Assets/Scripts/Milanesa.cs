@@ -8,17 +8,13 @@ public class Milanesa : MonoBehaviour
 
     public static int cooking = 3;
     public Image milanesa;
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public AudioClip clip;
 
     // Update is called once per frame
     void Update()
     {
+      if(Instance.play)
+      {
         if(cooking == 3)
         {
             milanesa.color = Color.red;
@@ -37,7 +33,9 @@ public class Milanesa : MonoBehaviour
             Timer.timer = 5;
             cooking = 3;
             MilanesaCount.points += 1;
-        }
+            AudioSource.PlayClipAtPoint(clip, new Vector3(5, 1, 2));
+        } 
+      }
         
     }
     public void Cooking()

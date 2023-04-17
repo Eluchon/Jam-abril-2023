@@ -9,25 +9,25 @@ public class Timer : MonoBehaviour
 
     public static float timer = 5; //Variable global timer
     public TextMeshProUGUI timerText; // Variable de texto
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    
     void Update()
     {
+      
+      if(Instance.play)
+      {
         if(timer > 0)
         {
         timer -= (Time.deltaTime * 5);
         timerText.text = "" + timer.ToString("f1");
         }
-
         if(timer <= 0)
         {
           Debug.Log("Se quemo la milanesa");
           timer = 0;
         }
+      }
+        
+      
+       
     }
 }
