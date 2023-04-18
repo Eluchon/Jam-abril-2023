@@ -9,6 +9,7 @@ public class Timer : MonoBehaviour
 
     public static float timer = 5; //Variable global timer
     public TextMeshProUGUI timerText; // Variable de texto
+    public static float diff = 3f;
     
     void Update()
     {
@@ -17,7 +18,7 @@ public class Timer : MonoBehaviour
       {
         if(timer > 0)
         {
-        timer -= (Time.deltaTime * 5);
+        timer -= (Time.deltaTime * diff);
         timerText.text = "" + timer.ToString("f1");
         }
         if(timer <= 0)
