@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ddb97b9531ca4eb48855459721516597
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - milanesa: {instanceID: 0}
+  - clip: {fileID: 8300000, guid: f338cdfbe866be348ac000973b47a7f6, type: 3}
+  - Instance: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class Instance : MonoBehaviour
 {
-
-    public static bool play = false;
-    
+    public bool Menu;
+    public bool play;
+    public bool Derrota;
+    public void Start()
+    {
+        
+        Menu = true;
+        play = false;
+        Derrota = false;
+    }
 }
