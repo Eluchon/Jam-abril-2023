@@ -39,7 +39,7 @@ public class Milanesa : MonoBehaviour
             Timer.timer = 5;
             cooking = 3;
             MilanesaCount.points += 1;
-            
+            Instantiate(particle,button.position.normalized,Quaternion.identity);
             AudioSource.PlayClipAtPoint(clip, new Vector3(5, 1, 2));
         } 
       }
@@ -47,7 +47,7 @@ public class Milanesa : MonoBehaviour
     }
     public void Cooking()
     {
-        Instantiate(particle,button.position.normalized,Quaternion.identity);
+        
         cooking -= 1;
         
       
