@@ -23,6 +23,7 @@ public class MenuPrincipal : MonoBehaviour
         }
 
     }
+
     public void Iniciar()
     {
         Instance.Menu = false;

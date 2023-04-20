@@ -26,8 +26,11 @@ public class Timer : MonoBehaviour
                 Instance.Derrota = true;
         }
       }
-        
-      
-       
+        if (Instance.Menu == true)
+        {
+            timer = 5;
+        }
+
+
     }
 }

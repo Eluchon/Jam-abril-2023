@@ -11,7 +11,9 @@ public class Milanesa : MonoBehaviour
     public AudioClip clip;
     public Instance Instance;
 
-    void Update()
+   
+
+    void Update ()
     {
         if (Instance.play == true)
       {
@@ -36,7 +38,7 @@ public class Milanesa : MonoBehaviour
             AudioSource.PlayClipAtPoint(clip, new Vector3(5, 1, 2));
         } 
       }
-        
+       
     }
     public void Cooking()
     {

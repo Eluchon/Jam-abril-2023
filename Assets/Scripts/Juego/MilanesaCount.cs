@@ -9,6 +9,7 @@ public class MilanesaCount : MonoBehaviour
     
     static public int points;
     public TextMeshProUGUI pointsText;
+    public Instance instance;
 
     void Start()
     {
@@ -18,8 +19,11 @@ public class MilanesaCount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        pointsText.text = "Contador de Milanesas: " + points.ToString(); 
-
+        pointsText.text = "Contador de Milanesas: " + points.ToString();
+        if (instance.Menu == true)
+        {
+            points = 0;
+        }
        
     }
 }

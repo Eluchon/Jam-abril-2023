@@ -12,18 +12,29 @@ public class CountDown : MonoBehaviour
     public Instance Instance;
     public GameObject canvasjuego;
 
+
+
+    
+    
+
     private void Update() 
     {
         if (Instance.Menu == false)
         {
-            canvasjuego.gameObject.SetActive(true);
-            if (Instance.play == false)
+            if (Instance.Derrota == false)
             {
-                StartCoroutine(CountdownToStart());
+                canvasjuego.gameObject.SetActive(true);
+                if (Instance.play == false)
+                {
+                    StartCoroutine(Coroutine());
+                    
+                }
             }
         }
-        IEnumerator CountdownToStart()
+       
+        IEnumerator Coroutine()
         {
+            
             while (countdownTime > 0)
             {
                 countdownDisplay.text = countdownTime.ToString();
@@ -36,6 +47,7 @@ public class CountDown : MonoBehaviour
             yield return new WaitForSeconds(1f);
             countdownDisplay.gameObject.SetActive(false);
             Instance.play = true;
+            
         }
     }
     
