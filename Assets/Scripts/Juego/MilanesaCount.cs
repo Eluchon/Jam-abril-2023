@@ -22,19 +22,19 @@ public class MilanesaCount : MonoBehaviour
         pointsText.text = "Contador de Milanesas: " + points.ToString();
          if (points == 10)
         {
-            Timer.diff = 4f;
+            Timer.diff = 2f;
         }
         if (points == 20)
         {
-            Timer.diff = 4.5f;
+            Timer.diff = 3f;
         }
         if (points == 30)
         {
-            Timer.diff = 5f;
+            Timer.diff = 4f;
         }
         if (points == 40)
         {
-            Timer.diff = 5.5f;
+            Timer.diff = 5f;
         }
         if (points == 50)
         {

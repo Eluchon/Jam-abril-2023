@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour
     public static float timer = 5;
     public TextMeshProUGUI timerText;
     private bool corutinas;
-    public static float diff = 3f;
+    public static float diff = 1f;
     public TextMeshProUGUI derrotaText;
     
     private void Start()
