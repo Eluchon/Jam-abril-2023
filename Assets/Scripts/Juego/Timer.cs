@@ -10,12 +10,14 @@ public class Timer : MonoBehaviour
     public static float timer = 5;
     public TextMeshProUGUI timerText;
     private bool corutinas;
+    public static float diff = 3f;
+    public TextMeshProUGUI derrotaText;
     
     private void Start()
     {
         corutinas = true;
     }
-    
+
     void Update()
     {
       
@@ -29,13 +31,14 @@ public class Timer : MonoBehaviour
         
         if(timer > 0)
         {
-        timer -= (Time.deltaTime * 5);
+        timer -= (Time.deltaTime * diff);
         timerText.text = "" + timer.ToString("f1");
         }
         if(timer <= 0)
         {
                 Instance.play=false; 
                 Instance.Derrota = true;
+                derrotaText.text = "SE TE QUEMARON LAS MILANGAS GIL. ¡HICISTE " + MilanesaCount.points.ToString() + " MILANESAS!";
         }
       }
         if (Instance.Menu == true)

@@ -17,11 +17,8 @@ public class MenuPrincipal : MonoBehaviour
             if (Instance.Derrota == false) {
                 CanvasJuego.gameObject.SetActive(false);
                 CanvasDerrota.gameObject.SetActive(false);
-
             }
-            
         }
-
     }
 
     public void Iniciar()

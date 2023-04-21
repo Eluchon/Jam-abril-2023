@@ -10,7 +10,11 @@ public class Milanesa : MonoBehaviour
     public Image milanesa;
     public AudioClip clip;
     public Instance Instance;
-
+    public Sprite milanesaCruda;
+    public Sprite milanesaCocida;
+    public Sprite milanesaLista;
+    [SerializeField] private GameObject particle;
+    //[SerializeField] private RectTransform buttonRect; 
    
 
     void Update ()
@@ -19,15 +23,15 @@ public class Milanesa : MonoBehaviour
       {
         if(cooking == 3)
         {
-            milanesa.color = Color.red;
+            milanesa.sprite = milanesaCruda;
         }
         if(cooking == 2)
         {
-            milanesa.color = Color.green;
+            milanesa.sprite = milanesaCocida;
         }
         if(cooking == 1)
         {
-            milanesa.color = Color.white;
+            milanesa.sprite = milanesaLista;
             
         }
         if(cooking == 0)
@@ -35,6 +39,7 @@ public class Milanesa : MonoBehaviour
             Timer.timer = 5;
             cooking = 3;
             MilanesaCount.points += 1;
+            Instantiate(particle, new Vector3(-0.22f,-0.32f,84.8f), Quaternion.identity);
             AudioSource.PlayClipAtPoint(clip, new Vector3(5, 1, 2));
         } 
       }
