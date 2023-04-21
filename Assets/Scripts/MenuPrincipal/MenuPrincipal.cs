@@ -27,6 +27,7 @@ public class MenuPrincipal : MonoBehaviour
     public void Iniciar()
     {
         Instance.Menu = false;
+        Instance.contador = true;
         CanvasMenu.gameObject.SetActive(false);
     }
 

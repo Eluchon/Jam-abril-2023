@@ -30,6 +30,7 @@ public class DerrotaUI : MonoBehaviour
     {
         CanvasDerrota.gameObject.SetActive(false);
         CanvasMenu.gameObject.SetActive(true);
+        Canvasjuego.gameObject.SetActive(false);
         Instance.Derrota = false;
         Instance.Menu = true;
         CountDown.countdownTime = 3;

@@ -9,12 +9,24 @@ public class Timer : MonoBehaviour
     public Instance Instance;
     public static float timer = 5;
     public TextMeshProUGUI timerText;
+    private bool corutinas;
+    
+    private void Start()
+    {
+        corutinas = true;
+    }
     
     void Update()
     {
       
       if(Instance.play == true)
       {
+        if  (corutinas == true)
+        {
+          gameObject.SendMessage("Stop");
+          corutinas = false;
+        }
+        
         if(timer > 0)
         {
         timer -= (Time.deltaTime * 5);

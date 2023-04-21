@@ -42,6 +42,11 @@ public class Milanesa : MonoBehaviour
     }
     public void Cooking()
     {
-        cooking -= 1;
+        if(Instance.play == true)
+        {
+            Debug.Log("cooking");
+            cooking -= 1;
+        }
+        
     }
 }

@@ -11,28 +11,29 @@ public class CountDown : MonoBehaviour
     public TextMeshProUGUI countdownDisplay;
     public Instance Instance;
     public GameObject canvasjuego;
-
-
-
+    private bool corutinas;
     
-    
+    private void Start()
+    {
+        corutinas = true;
+    }
 
     private void Update() 
     {
-        if (Instance.Menu == false)
+        if (Instance.contador == true)
         {
-            if (Instance.Derrota == false)
+            canvasjuego.gameObject.SetActive(true); 
+            countdownDisplay.gameObject.SetActive(true);
+            if  (corutinas == true)
             {
-                canvasjuego.gameObject.SetActive(true);
-                if (Instance.play == false)
-                {
-                    StartCoroutine(Coroutine());
-                    
-                }
+                StartCoroutine(CountdownToStart());
+                corutinas = false;
             }
         }
-       
-        IEnumerator Coroutine()
+        
+    }
+    
+    IEnumerator CountdownToStart()
         {
             
             while (countdownTime > 0)
@@ -46,10 +47,17 @@ public class CountDown : MonoBehaviour
 
             yield return new WaitForSeconds(1f);
             countdownDisplay.gameObject.SetActive(false);
+            canvasjuego.gameObject.SetActive(true); 
+            Instance.contador= false;
             Instance.play = true;
+            countdownTime = 3;
+            corutinas = true;
             
         }
+
+    public void Stop()
+    {
+        StopCoroutine(CountdownToStart());
+         Debug.Log("stop"   );
     }
-    
-   
 }
