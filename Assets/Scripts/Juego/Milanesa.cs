@@ -43,6 +43,10 @@ public class Milanesa : MonoBehaviour
             AudioSource.PlayClipAtPoint(clip, new Vector3(5, 1, 2));
         } 
       }
+      if(Instance.Derrota == true)
+        {
+            milanesa.sprite = milanesaCruda;
+        }
        
     }
     public void Cooking()
