@@ -17,6 +17,7 @@ public class MenuMusica : MonoBehaviour
     public GameObject Sabalero;
     public GameObject Muchachos;
     public GameObject himno;
+    public GameObject botonsilenciar;
 
     public void Start()
     {
@@ -29,6 +30,7 @@ public class MenuMusica : MonoBehaviour
         Sabalero.gameObject.SetActive(false);
         Muchachos.gameObject.SetActive(false);
         himno.gameObject.SetActive(false);
+        botonsilenciar.gameObject.SetActive(false);
     }
     public void Boton()
     {
@@ -41,6 +43,7 @@ public class MenuMusica : MonoBehaviour
         BotonMuchachosVoc.gameObject.SetActive(true);
         BotonSabalero.gameObject.SetActive(true);
         pizarra.gameObject.SetActive(true);
+        botonsilenciar.gameObject.SetActive(true);
     }
 
 

@@ -14,6 +14,7 @@ public class BotVolver : MonoBehaviour
     public GameObject BotonMuchachosVoc;
     public GameObject BotonAtras;
     public TextMeshProUGUI pizarra;
+    public GameObject botonSilenciar;
     
         public void Boton()
         {
@@ -26,6 +27,7 @@ public class BotVolver : MonoBehaviour
             BotonMuchachosVoc.gameObject.SetActive(false);
             BotonSabalero.gameObject.SetActive(false);
             pizarra.gameObject.SetActive(false);
+        botonSilenciar.gameObject.SetActive(false);
         }
     
 }
