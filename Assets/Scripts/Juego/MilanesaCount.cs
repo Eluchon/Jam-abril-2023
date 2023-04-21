@@ -59,6 +59,7 @@ public class MilanesaCount : MonoBehaviour
         if (instance.Menu == true)
         {
             points = 0;
+            Timer.diff = 1f;
         }
        
     }
